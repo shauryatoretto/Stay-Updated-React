@@ -8,8 +8,12 @@ import CardActions from "@material-ui/core/CardActions";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import LaunchIcon from "@material-ui/icons/Launch";
+import LinearProgress from '@material-ui/core/LinearProgress';
+
+
 
 export default function NewsCard(props) {
+  if (props.data ==null) return <center><LinearProgress /></center>
   const card = props.data.map((item) => {
     const title = item.title.split(" - ");
     const date = item.publishedAt.split("T");
@@ -38,6 +42,6 @@ export default function NewsCard(props) {
       </Card>
     );
   });
-
+  
   return <div className="mainDiv">{card}</div>;
 }
