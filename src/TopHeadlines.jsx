@@ -18,7 +18,7 @@ class TopHeadlines extends Component {
   }
 
   componentDidMount() {
-    this.API("http://shauryasuman.pythonanywhere.com/topHeadlines");
+    this.API("https://shauryasuman.pythonanywhere.com/topHeadlines");
   }
   render() {
     return (

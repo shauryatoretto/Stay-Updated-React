@@ -18,7 +18,7 @@ class Science extends Component {
   }
 
   componentDidMount() {
-    this.API("http://shauryasuman.pythonanywhere.com/science");
+    this.API("https://shauryasuman.pythonanywhere.com/science");
   }
   render() {
     return (

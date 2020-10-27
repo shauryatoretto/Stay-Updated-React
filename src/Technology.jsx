@@ -18,7 +18,7 @@ class Technology extends Component {
   }
 
   componentDidMount() {
-    this.API("http://shauryasuman.pythonanywhere.com/technology");
+    this.API("https://shauryasuman.pythonanywhere.com/technology");
   }
   render() {
     return (

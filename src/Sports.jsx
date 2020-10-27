@@ -18,7 +18,7 @@ class Sports extends Component {
   }
 
   componentDidMount() {
-    this.API("http://shauryasuman.pythonanywhere.com/sports");
+    this.API("https://shauryasuman.pythonanywhere.com/sports");
   }
   render() {
     return (

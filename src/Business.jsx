@@ -18,7 +18,7 @@ class Business extends Component {
   }
 
   componentDidMount() {
-    this.API("http://shauryasuman.pythonanywhere.com/business");
+    this.API("https://shauryasuman.pythonanywhere.com/business");
   }
   render() {
     return (

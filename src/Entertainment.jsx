@@ -18,7 +18,7 @@ class Entertainment extends Component {
   }
 
   componentDidMount() {
-    this.API("http://shauryasuman.pythonanywhere.com/entertainment");
+    this.API("https://shauryasuman.pythonanywhere.com/entertainment");
   }
   render() {
     return (
