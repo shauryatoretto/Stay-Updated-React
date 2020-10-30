@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
 }
+
 .image {
   margin: 20px;
   width: 90%;
@@ -29,4 +30,9 @@
   padding: 20px 20px;
   margin-top: 60px;
   
+}
+
+.progress {
+  text-align: center;
+  margin-top: 50%;
 }
