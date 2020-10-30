@@ -14,6 +14,7 @@ class Health extends Component {
   API(url) {
     axios.get(url).then((response) => {
       this.setState({ data: response.data });
+      this.setState({ loading: false });
       console.log(response);
     });
   }
