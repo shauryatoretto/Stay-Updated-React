@@ -3,11 +3,12 @@ import "./Common.css";
 import axios from "axios";
 import NewsCard from "./NewsCard";
 import NavBar from "./NavBar";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 class Health extends Component {
   constructor(props) {
     super(props);
-    this.state = { data: [] };
+    this.state = { data: [], loading: true };
   }
 
   API(url) {
@@ -21,12 +22,17 @@ class Health extends Component {
     this.API("https://shauryasuman.pythonanywhere.com/health");
   }
   render() {
-    return(
+    return this.state.loading ? (
+      <div className="progress">
+        <NavBar name="Top Headlines" />
+        <CircularProgress />
+      </div>
+    ) : (
       <>
-        <NavBar name="Health News"/>
-        <NewsCard data={this.state.data}/>
+        <NavBar name="Health News" />
+        <NewsCard data={this.state.data} />
       </>
-    )
+    );
   }
 }
 

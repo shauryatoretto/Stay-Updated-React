@@ -3,16 +3,18 @@ import "./Common.css";
 import NavBar from "./NavBar";
 import NewsCard from "./NewsCard";
 import axios from "axios";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 class Entertainment extends Component {
   constructor(props) {
     super(props);
-    this.state = { data: [] };
+    this.state = { data: [], loading: true };
   }
 
   API(url) {
     axios.get(url).then((response) => {
       this.setState({ data: response.data });
+      this.setState({ loading: false });
       console.log(response);
     });
   }
@@ -21,10 +23,15 @@ class Entertainment extends Component {
     this.API("https://shauryasuman.pythonanywhere.com/entertainment");
   }
   render() {
-    return (
+    return this.state.loading ? (
+      <div className="progress">
+        <NavBar name="Top Headlines" />
+        <CircularProgress />
+      </div>
+    ) : (
       <>
         <NavBar name="Entertainment News" />
-        <NewsCard data={this.state.data}/>
+        <NewsCard data={this.state.data} />
       </>
     );
   }
